@@ -1,6 +1,14 @@
+import { FormEvent } from "react";
+
 const Form = () => {
+    const handleSubmit = (event: FormEvent) => {
+        // to prevent the default action(page will be refreshed after submit)
+        event.preventDefault();
+        console.log("clicked");
+    }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
