@@ -5,7 +5,7 @@ const Form = () => {
   const nameRef = useRef<HTMLInputElement>(null);
   const ageRef = useRef<HTMLInputElement>(null);
   // creating an object which can be stored in a server-side
-  const person = { name: "", age: 0 };
+  const person = { name: "", age: '' };
 
   const handleSubmit = (event: FormEvent) => {
     // to prevent the default action(page will be refreshed after submit)
